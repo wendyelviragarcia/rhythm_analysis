@@ -13,8 +13,15 @@ ui <- fluidPage(
       
       # Input: Select a file ----
       fileInput("file1", "Upload or drag your TextGrids.",
-                multiple = TRUE),
-      p("I have tried to make the app quite robust but if the uploading fails, you can try to convert your TextGrids to UTF-8."),
+                multiple = TRUE, accept = ".TextGrid"),
+      p("I have tried to make the app quite robust but if the uploading fails, you can try to convert your TextGrids to UTF-16. And check that all tiers have names"),
+      
+      # Horizontal line ----
+      tags$hr(),
+      
+      fileInput("groups", "(Optional) Upload a xlsx with the file-group equivalence ",
+                multiple = FALSE, accept = ".xlsx"),
+      p("This will be a Excel file, with two columns, the first named file and the second with te group for example sp-maria.TextGrid and Spanish in the second column."),
       
       # Horizontal line ----
       tags$hr(),
@@ -26,8 +33,8 @@ ui <- fluidPage(
       
       # Input: select annotation type
       selectInput("annotation", h4("Annotation type"), 
-                  choices = list("Phonetic" = 1,"Orthographic" = 2, "C and V" = 3,
-                                 "PTK" = 4), selected = 1),
+                  choices = list("Phonetic-IPA" = 1,"Orthographic" = 2, "C and V" = 3,
+                                 "PTK" = 4,"Phonetic-SAMPA" = 5), selected = 1),
       tags$hr(),
       h4("Download data in .csv"),
       # Add a download button
@@ -35,7 +42,16 @@ ui <- fluidPage(
       tags$hr(),
       
       downloadButton(outputId = "downloadDurations", label = "Download all Durations"),
+      
+      
+      
       tags$hr(),
+      
+      
+      checkboxInput("outliers", "Remove outliers", value = TRUE),
+      
+      tags$hr(),
+      
       
       p("To download the graphs you can drag them to your Desktop.")
       # Input: Select number of rows to display ----
@@ -43,8 +59,8 @@ ui <- fluidPage(
      #              choices = c(SpeechRate = "SpeechRate", PercentageConsonants = "PercentageConsonants",
       #                         PercentageVowel = "PercentageVowel", VarcoV="Varco", VarcoC = "VarcoC"),
        #            selected = c("SpeechRate","PercentageVowel","PercentageConsonants")),
-      
-      
+    # Input: Select number of rows to display ----
+
       # Input: Select number of rows to display ----
      # checkboxGroupInput("disp", "Graphs",
       #                   choices = c(PerV = "PerV", Varcos = "Varcos",
@@ -61,12 +77,17 @@ ui <- fluidPage(
       tableOutput("contents"),
       h4("Graphs"),
       plotOutput("plot1"),
+      plotOutput("plot8_mds"),
+      plotOutput("plot7_pca"),
+      
+      plotOutput("plot6_dengrogram"),
+      plotOutput("plot_varcos"),
+      
       plotOutput("plot2"),
       plotOutput("plot3"),
       plotOutput("plot4"),
-      plotOutput("plot5"),
-      plotOutput("plot6"),
-      plotOutput("plot7")
+      plotOutput("plot5")
+      
       
       
       
