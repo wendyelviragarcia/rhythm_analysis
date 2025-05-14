@@ -21,5 +21,8 @@ You can also download the duration database that will be created and the rhythm 
 
 
 
-[![DOI](https://zenodo.org/badge/171128579.svg)](https://doi.org/10.5281/zenodo.15402012)
+
+
+[![DOI](https://zenodo.org/badge/259353096.svg)](https://doi.org/10.5281/zenodo.15401985)
+
 
