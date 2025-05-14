@@ -17,3 +17,9 @@ Numeric values in graphic table  (speech rate -sounds/second., %V, %C, Varco V, 
 You can also download the duration database that will be created and the rhythm metrics in a csv file.
 
 ![image](./testFiles/rhythmApp.png)
+
+
+
+
+[![DOI](https://zenodo.org/badge/171128579.svg)](https://doi.org/10.5281/zenodo.15402012)
+
