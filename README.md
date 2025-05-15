@@ -7,8 +7,6 @@ This app provides a simple yet effective interface for analyzing rhythmic proper
 👉 **Access the app** via the [the Shiny server](https://wendyelvira.shinyapps.io/rhythm_analysis/)
 **Note**: This app is hosted on a public ShinyApps server. If your files contain personal, private, or sensitive data, we recommend **not uploading them here**. Instead, download the code and run it locally using **RStudio** with the `shiny` package, or deploy it to a secure server managed by your institution.
 
----
-
 ## Input Requirements
 
 - **At least two** Praat **TextGrid** files (or more), containing labeled intervals for consonants and vowels.
@@ -20,7 +18,7 @@ This app provides a simple yet effective interface for analyzing rhythmic proper
   - **PTK / a**
   - **C / V**
 
----
+
 
 ## Output
 
@@ -35,10 +33,10 @@ This app provides a simple yet effective interface for analyzing rhythmic proper
 - **Downloadable data**:
   - Duration database
   - Computed rhythm metrics as a `.csv` file
+  - 
+![App output](./testFiles/rhythmApp.png)
 
----
 
-![[App screenshot](./testFiles/rhythmApp.png)
 
 > 📌 **Citation**: If you use this app in your research, please cite:  
 > Elvira-García, Wendy. (2025). *Rhythm Analysis: A Shiny Interface for computation and visualization of rhythm metrics*.  [DOI or URL.] (https://doi.org/10.5281/zenodo.15401985)
