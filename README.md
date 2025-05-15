@@ -1,8 +1,8 @@
 # Rhythm Analysis
 
-**An interactive Shiny app for computing and visualizing rhythm metrics**
+**A Shiny Interface for computation and visualization of rhythm metrics**
 
-This app provides a simple yet effective interface for analyzing rhythmic properties of speech based on annotated TextGrid files. It allows you to compute a variety of standard rhythm metrics and visualize them directly within the app.
+This app provides an interface for analyzing rhythmic metrics (such as %V, varcos, PVI) of speech based on annotated TextGrid files. It allows you to compute a variety of standard rhythm metrics and visualize them directly within the app.
 
 👉 **Access the app** via the [the Shiny server](https://wendyelvira.shinyapps.io/rhythm_analysis/)
 **Note**: This app is hosted on a public ShinyApps server. If your files contain personal, private, or sensitive data, we recommend **not uploading them here**. Instead, download the code and run it locally using **RStudio** with the `shiny` package, or deploy it to a secure server managed by your institution.
@@ -29,11 +29,12 @@ This app provides a simple yet effective interface for analyzing rhythmic proper
   - VarcoV / VarcoC
   - DeltaV / DeltaC
 - **Visualizations**:
-  - Interactive plots of duration data and rhythm metrics
+  - Interactive plots of duration data and rhythm metrics, PCA, MDS and dendrograms.
 - **Downloadable data**:
   - Duration database
   - Computed rhythm metrics as a `.csv` file
-  - 
+
+    
 ![App output](./testFiles/rhythmApp.png)
 
 
